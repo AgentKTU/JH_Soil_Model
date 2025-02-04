@@ -122,7 +122,7 @@ Tvalue = 90
   []
   [simple_fluid1]
     type = SimpleFluidProperties
-    density0 = 0.6
+    density0 = 0.3
     thermal_expansion = 0
     cv = 2
   []
@@ -363,10 +363,9 @@ Tvalue = 90
     type = ParsedFunction
     expression = 'if(t<t0,dt0,if(t>t0&t<t1,dt1,dt2))'
     symbol_names = 't0 t1 dt0 dt1 dt2'
-    symbol_values = '8640 86400 864 8640 86400'
+    symbol_values = '8640 86400 864 8640 864000'
   []
 []
-
 [Executioner]
   type = Transient
   automatic_scaling = true
